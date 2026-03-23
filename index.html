@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Certificate Verification</title>
+</head>
+<body style="font-family: Arial; text-align:center; padding:50px;">
+
+<h2>Certificate Verification</h2>
+
+<div id="data"></div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+document.getElementById("data").innerHTML = `
+<p><b>Name:</b> ${params.get("name")}</p>
+<p><b>Course:</b> ${params.get("course")}</p>
+<p><b>Start Date:</b> ${params.get("start")}</p>
+<p><b>End Date:</b> ${params.get("end")}</p>
+<p><b>Grade:</b> ${params.get("grade")}</p>
+<p><b>Certificate No:</b> ${params.get("cert")}</p>
+`;
+
+</script>
+
+</body>
+</html>
